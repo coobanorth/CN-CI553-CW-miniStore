@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c41.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c4b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c4b0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c4c0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c4c0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c71.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/cb1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/d490.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/d4a0.dat" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2nYurUR6EyqNPHTDPJfCIsuwXpt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <classpathModifications>
@@ -43,5 +91,16 @@
         <item itemvalue="Application.Setup" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="" />
+      <created>1729162531211</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729162531211</updated>
+    </task>
+    <servers />
   </component>
 </project>
