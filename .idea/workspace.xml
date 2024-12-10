@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/clients/customer/NameToNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catshop.db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catshop.db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c41.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c4b0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c4c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/cb1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/customer/CustomerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/customer/CustomerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/cashier/CashierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/cashier/CashierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/cashier/CashierModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/cashier/CashierModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/cashier/CashierView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/cashier/CashierView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" afterDir="false" />
     </list>
@@ -71,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "CheckByName",
+    "git-widget-placeholder": "BuyMany",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cooba/Documents/GitHub/CN-CI553-CW-miniStore",
     "node.js.detected.package.eslint": "true",
