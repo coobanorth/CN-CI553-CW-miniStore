@@ -19,13 +19,13 @@ public class CustomerView implements Observer
 {
   class Name                              // Names of buttons
   {
-    public static final String CHECK  = "Check";
-    public static final String CHECKName  = "Search";
-    public static final String CLEAR  = "Clear";
+    public static final String CHECK  = "Search Product Number";
+    public static final String CHECKName  = "Search Product Name";
+    public static final String CLEAR  = "Clear Results";
   }
 
-  private static final int H = 300;       // Height of window pixels
-  private static final int W = 400;       // Width  of window pixels
+  private static final int H = 324;       // Height of window pixels
+  private static final int W = 501;       // Width  of window pixels
 
   private final JLabel      pageTitle  = new JLabel();
   private final JLabel      theAction  = new JLabel();
@@ -57,50 +57,68 @@ public class CustomerView implements Observer
     {
       System.out.println("Exception: " + e.getMessage() );
     }
+
+    Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
+    Color mainblue = new Color(16, 72, 98);
+    Color maingray = new Color(116, 116, 116);
+
+
     Container cp         = rpc.getContentPane();    // Content Pane
     Container rootWindow = (Container) rpc;         // Root Window
     cp.setLayout(null);                             // No layout manager
     rootWindow.setSize( W, H );                     // Size of Window
     rootWindow.setLocation( x, y );
+    cp.setBackground(maingray);             //set background to gray
 
-    Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
+
     
-    pageTitle.setBounds( 110, 0 , 270, 20 );       
-    pageTitle.setText( "Search products" );                        
+    pageTitle.setBounds( 210, 0 , 270, 20 );
+    pageTitle.setText( "Search products" );
+    pageTitle.setForeground( Color.WHITE );
     cp.add( pageTitle );
 
-    theBtCheck.setBounds( 16, 25+60*0, 80, 40 );    // Check button
+    theBtCheck.setBounds( 4, 50+40+10, 192, 40 );    // Check button
+    theBtCheck.setBackground(mainblue);             //set background to blue
+    theBtCheck.setForeground( Color.WHITE );        //set text to white
     theBtCheck.addActionListener(                   // Call back code
       e -> cont.doCheck( theInput.getText() ) );
     cp.add( theBtCheck );                           //  Add to canvas
 
-    theBtCheckName.setBounds( 16, 25+60*1, 80, 40 );    // Check button
-    theBtCheckName.setBackground(Color.CYAN);
-    theBtCheckName.setForeground( Color.BLACK );
+    theBtCheckName.setBounds( 4, 50, 192, 40 );    // Check button
+    theBtCheckName.setBackground(mainblue);             //set background to blue
+    theBtCheckName.setForeground( Color.WHITE );        //set text to white
     theBtCheckName.addActionListener(                   // Call back code
             e -> cont.doCheckByName( theInput.getText() ) );
     cp.add( theBtCheckName );                           //  Add to canvas
 
-    theBtClear.setBounds( 16, 25+60*2, 80, 40 );    // Clear button
+    theBtClear.setBounds( 4, 100+40+10, 192, 40 );    // Clear button
+    theBtClear.setBackground(mainblue);             //set background to blue
+    theBtClear.setForeground( Color.WHITE );        //set text to white
     theBtClear.addActionListener(                   // Call back code
       e -> cont.doClear() );
     cp.add( theBtClear );                           //  Add to canvas
 
-    theAction.setBounds( 110, 25 , 270, 20 );       // Message area
+    theAction.setBounds( 210, 25 , 270, 20 );       // Message area
+    theAction.setBackground(maingray);             //set background to gray
+    theAction.setForeground(Color.WHITE);        //set text to white
     theAction.setText( " " );                       // blank
     cp.add( theAction );                            //  Add to canvas
 
-    theInput.setBounds( 110, 50, 270, 40 );         // Product no area
+    theInput.setBounds( 210, 50, 270, 40 );         // Product no area
+    theInput.setBackground(maingray);             //set background to gray
+    theInput.setForeground(Color.WHITE);        //set text to white
     theInput.setText("");                           // Blank
     cp.add( theInput );                             //  Add to canvas
     
-    theSP.setBounds( 110, 100, 270, 160 );          // Scrolling pane
+    theSP.setBounds( 210, 100, 270, 160 );          // Scrolling pane
+    theSP.setBackground(maingray);             //set background to gray
+    theSP.setForeground(Color.WHITE);        //set text to white
     theOutput.setText( "" );                        //  Blank
     theOutput.setFont( f );                         //  Uses font  
     cp.add( theSP );                                //  Add to canvas
     theSP.getViewport().add( theOutput );           //  In TextArea
 
-    thePicture.setBounds( 16, 25+60*3, 80, 80 );   // Picture area
+    thePicture.setBounds( 60, 150+40+10, 80, 80 );   // Picture area
     cp.add( thePicture );                           //  Add to canvas
     thePicture.clear();
     
