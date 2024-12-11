@@ -2,6 +2,7 @@ package clients.customer;
 
 import catalogue.Basket;
 import catalogue.BetterBasket;
+import clients.Logo;
 import clients.Picture;
 import middle.MiddleFactory;
 import middle.StockReader;
@@ -37,6 +38,7 @@ public class CustomerView implements Observer
   private final JButton     theBtClear = new JButton( Name.CLEAR );
 
   private Picture thePicture = new Picture(80,80);
+  private Logo theLogo = new Logo(192,40);
   private StockReader theStock   = null;
   private CustomerController cont= null;
 
@@ -101,13 +103,13 @@ public class CustomerView implements Observer
     theAction.setBounds( 210, 25 , 270, 20 );       // Message area
     theAction.setBackground(maingray);             //set background to gray
     theAction.setForeground(Color.WHITE);        //set text to white
-    theAction.setText( " " );                       // blank
+    theAction.setText( "" );                       // blank
     cp.add( theAction );                            //  Add to canvas
 
     theInput.setBounds( 210, 50, 270, 40 );         // Product no area
     theInput.setBackground(maingray);             //set background to gray
     theInput.setForeground(Color.WHITE);        //set text to white
-    theInput.setText("");                           // Blank
+    theInput.setText("Search");                           // Blank
     cp.add( theInput );                             //  Add to canvas
     
     theSP.setBounds( 210, 100, 270, 160 );          // Scrolling pane
@@ -121,6 +123,11 @@ public class CustomerView implements Observer
     thePicture.setBounds( 60, 150+40+10, 80, 80 );   // Picture area
     cp.add( thePicture );                           //  Add to canvas
     thePicture.clear();
+
+    theLogo.setBounds( 4, 0, 192, 40 );   // Picture area
+    cp.add(theLogo);                           //  Add to canvas
+    thePicture.clear();
+
     
     rootWindow.setVisible( true );                  // Make visible);
     theInput.requestFocus();                        // Focus is here

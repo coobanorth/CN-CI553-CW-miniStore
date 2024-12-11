@@ -16,6 +16,7 @@ public class Picture extends Canvas
   private int   height     = 260;
   private Image thePicture = null;
 
+
   public Picture()
   {
     setSize( width, height );
@@ -56,15 +57,17 @@ public class Picture extends Canvas
    *  draw the image 
    * @param g Grapics context
    */
+  Color maingray = new Color(116, 116, 116);
 
   public void drawImage( Graphics2D g )
   {
     setSize( width, height );
-    g.setPaint( Color.white );
+    g.setPaint(maingray);
     g.fill( new Rectangle2D.Double( 0, 0, width, height ) );
     if ( thePicture != null )
     {
       g.drawImage(thePicture, 0, 0, null);
     }
   }
+
 }
