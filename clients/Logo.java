@@ -1,41 +1,22 @@
 package clients;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-
-import java.awt.image.BufferedImage;
-import java.io.*;
-
-public class Logo extends Canvas {
+public class Logo extends JPanel {
     private int   width      = 192;
     private int   height     = 40;
-    private Image theLogo = null;
+    private Image theLogo;
 
-    public Logo()
-    {
-        setSize( width, height );
-    }
+    Color maingray = new Color(0, 0, 0);
 
     public Logo(int aWidth, int aHeight)
     {
         width = aWidth;
         height= aHeight;
         setSize( width, height );
-    }
-
-    public void set( ImageIcon ic )
-    {
-        theLogo = ic.getImage();         // Image to be drawn
-        repaint();
-    }
-
-    public void clear()
-    {
-        theLogo = null;                  // clear picture
-        repaint();                          // Force repaint
+        loadImage();
     }
 
     public void paint( Graphics g )       // When 'Window' is first
@@ -43,20 +24,17 @@ public class Logo extends Canvas {
         drawImage( (Graphics2D) g );
     }
 
-    public void update( Graphics g )      // Called by repaint
-    {                                     //
-        drawImage( (Graphics2D) g );        // Draw picture
+    private void loadImage() {
+        theLogo = new ImageIcon("images/MiniStore.jpg").getImage();
     }
 
-    Color maingray = new Color(0, 0, 0);
-
-    Image image = getToolkit( ).getImage("images/MiniStore.png");
-
-    public void drawImage( Graphics2D g )
+    private void drawImage( Graphics2D g )
     {
         setSize( width, height );
         g.setPaint(maingray);
         g.fill( new Rectangle2D.Double( 0, 0, width, height ) );
-        g.drawImage( image, 0, 0, this );
+
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.drawImage(theLogo, 0, 0, null);
     }
 }

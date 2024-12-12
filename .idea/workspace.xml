@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/clients/Logo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/Picture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catshop.db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catshop.db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c4e0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c4e0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/Logo.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/Logo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/backDoor/BackDoorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/backDoor/BackDoorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/cashier/CashierView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/cashier/CashierView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/customer/CustomerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/customer/CustomerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/packing/PackingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/packing/PackingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,26 +55,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CustomerClient.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Setup.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;UI-Update&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cooba/Documents/GitHub/CN-CI553-CW-miniStore&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BackDoorClient.executor": "Run",
+    "Application.CashierClient.executor": "Run",
+    "Application.CustomerClient.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PackingClient.executor": "Run",
+    "Application.Setup.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "UI-Update",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/cooba/Documents/GitHub/CN-CI553-CW-miniStore",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.CustomerClient">
+}]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="BackDoorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clients.backDoor.BackDoorClient" />
+      <module name="CN-CI553-CW-miniStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clients.backDoor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CashierClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clients.cashier.CashierClient" />
+      <module name="CN-CI553-CW-miniStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clients.cashier.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomerClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="clients.customer.CustomerClient" />
       <module name="CN-CI553-CW-miniStore" />
@@ -97,15 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Setup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <classpathModifications>
-        <entry path="C:\Users\cooba\Documents\GitHub\CN-CI553-CW-miniStore\lib\db-derby-10.14.2.0-lib\lib\derby.jar" />
-      </classpathModifications>
-      <option name="MAIN_CLASS_NAME" value="clients.Setup" />
+    <configuration name="PackingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clients.packing.PackingClient" />
       <module name="CN-CI553-CW-miniStore" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="clients.*" />
+          <option name="PATTERN" value="clients.packing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,15 +147,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.BackDoorClient" />
+      <item itemvalue="Application.CashierClient" />
+      <item itemvalue="Application.PackingClient" />
       <item itemvalue="Application.CustomerClient" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Setup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomerClient" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Setup" />
+        <item itemvalue="Application.PackingClient" />
+        <item itemvalue="Application.BackDoorClient" />
+        <item itemvalue="Application.CashierClient" />
+        <item itemvalue="Application.CustomerClient" />
       </list>
     </recent_temporary>
   </component>
@@ -144,6 +181,7 @@
       <updated>1729162531211</updated>
       <workItem from="1732984490546" duration="3772000" />
       <workItem from="1733948496869" duration="8284000" />
+      <workItem from="1734000631825" duration="7402000" />
     </task>
     <servers />
   </component>

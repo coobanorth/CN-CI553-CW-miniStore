@@ -1,5 +1,6 @@
 package clients.backDoor;
 
+import clients.Logo;
 import middle.MiddleFactory;
 import middle.StockReadWriter;
 
@@ -14,12 +15,12 @@ import java.util.Observer;
 
 public class BackDoorView implements Observer
 {
-  private static final String RESTOCK  = "Add";
+  private static final String RESTOCK  = "Add Stock";
   private static final String CLEAR    = "Clear";
-  private static final String QUERY    = "Query";
+  private static final String QUERY    = "Query Stock";
  
-  private static final int H = 300;       // Height of window pixels
-  private static final int W = 400;       // Width  of window pixels
+  private static final int H = 324;       // Height of window pixels
+  private static final int W = 501;       // Width  of window pixels
 
   private final JLabel      pageTitle  = new JLabel();
   private final JLabel      theAction  = new JLabel();
@@ -30,7 +31,9 @@ public class BackDoorView implements Observer
   private final JButton     theBtClear = new JButton( CLEAR );
   private final JButton     theBtRStock = new JButton( RESTOCK );
   private final JButton     theBtQuery = new JButton( QUERY );
-  
+
+  private Logo theLogo = new Logo(192,40);
+
   private StockReadWriter theStock     = null;
   private BackDoorController cont= null;
 
@@ -50,52 +53,76 @@ public class BackDoorView implements Observer
     {
       System.out.println("Exception: " + e.getMessage() );
     }
+
+    Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
+    Color mainblue = new Color(16, 72, 98);
+    Color maingray = new Color(116, 116, 116);
+
     Container cp         = rpc.getContentPane();    // Content Pane
     Container rootWindow = (Container) rpc;         // Root Window
     cp.setLayout(null);                             // No layout manager
     rootWindow.setSize( W, H );                     // Size of Window
     rootWindow.setLocation( x, y );
-    
-    Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
 
-    pageTitle.setBounds( 110, 0 , 270, 20 );       
-    pageTitle.setText( "Staff check and manage stock" );                        
+    cp.setBackground(maingray);             //set background to gray
+
+    pageTitle.setBounds( 210, 0 , 270, 20 );
+    pageTitle.setText( "Staff check and manage stock" );
+    pageTitle.setForeground( Color.WHITE );
     cp.add( pageTitle );
     
-    theBtQuery.setBounds( 16, 25+60*0, 80, 40 );    // Buy button 
+    theBtQuery.setBounds( 4, 50, 192, 40 );    // Buy button
+    theBtQuery.setBackground(mainblue);             //set background to blue
+    theBtQuery.setForeground( Color.WHITE );        //set text to white
     theBtQuery.addActionListener(                   // Call back code
       e -> cont.doQuery( theInput.getText() ) );
     cp.add( theBtQuery );                           //  Add to canvas
 
-    theBtRStock.setBounds( 16, 25+60*1, 80, 40 );   // Check Button
+    theBtRStock.setBounds( 4, 50+40+10, 192, 40 );   // Bought Button
+    theBtRStock.setBackground(mainblue);             //set background to blue
+    theBtRStock.setForeground( Color.WHITE );        //set text to white
     theBtRStock.addActionListener(                  // Call back code
       e -> cont.doRStock( theInput.getText(),
                           theInputNo.getText() ) );
     cp.add( theBtRStock );                          //  Add to canvas
 
-    theBtClear.setBounds( 16, 25+60*2, 80, 40 );    // Buy button 
+    theBtClear.setBounds( 4, 100+40+10, 192, 40 );    // clear button
+    theBtClear.setBackground(mainblue);             //set background to blue
+    theBtClear.setForeground( Color.WHITE );        //set text to white
     theBtClear.addActionListener(                   // Call back code
       e -> cont.doClear() );
     cp.add( theBtClear );                           //  Add to canvas
 
- 
-    theAction.setBounds( 110, 25 , 270, 20 );       // Message area
+
+    theAction.setBounds( 210, 25 , 270, 20 );       // Message area
+    theAction.setBackground(maingray);             //set background to gray
+    theAction.setForeground(Color.WHITE);        //set text to white
     theAction.setText( "" );                        // Blank
     cp.add( theAction );                            //  Add to canvas
 
-    theInput.setBounds( 110, 50, 120, 40 );         // Input Area
-    theInput.setText("");                           // Blank
+    theInput.setBounds( 210, 50, 130, 40 );         // input area
+    theInput.setBackground(maingray);             //set background to gray
+    theInput.setForeground(Color.WHITE);        //set text to white
+    theInput.setText("Product Number");                           // Blank
     cp.add( theInput );                             //  Add to canvas
-    
-    theInputNo.setBounds( 260, 50, 120, 40 );       // Input Area
-    theInputNo.setText("0");                        // 0
+
+    theInputNo.setBounds( 350, 50, 130, 40 );         // Input Area
+    theInputNo.setBackground(maingray);             //set background to gray
+    theInputNo.setForeground(Color.WHITE);        //set text to white
+    theInputNo.setText("Stock To Add");                        // 0
     cp.add( theInputNo );                           //  Add to canvas
 
-    theSP.setBounds( 110, 100, 270, 160 );          // Scrolling pane
+    theSP.setBounds( 210, 100, 270, 160 );          // Scrolling pane
+    theSP.setBackground(maingray);             //set background to gray
+    theSP.setForeground(Color.WHITE);        //set text to white
     theOutput.setText( "" );                        //  Blank
     theOutput.setFont( f );                         //  Uses font  
     cp.add( theSP );                                //  Add to canvas
     theSP.getViewport().add( theOutput );           //  In TextArea
+
+    theLogo.setBounds( 4, 0, 192, 40 );   // Picture area
+    cp.add(theLogo);                           //  Add to canvas
+
     rootWindow.setVisible( true );                  // Make visible
     theInput.requestFocus();                        // Focus is here
   }

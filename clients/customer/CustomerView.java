@@ -126,7 +126,6 @@ public class CustomerView implements Observer
 
     theLogo.setBounds( 4, 0, 192, 40 );   // Picture area
     cp.add(theLogo);                           //  Add to canvas
-    thePicture.clear();
 
     
     rootWindow.setVisible( true );                  // Make visible);

@@ -1,6 +1,7 @@
 package clients.packing;
 
 import catalogue.Basket;
+import clients.Logo;
 import middle.MiddleFactory;
 import middle.OrderProcessing;
 
@@ -16,17 +17,19 @@ import java.util.Observer;
 
 public class PackingView implements Observer
 {
-  private static final String PACKED = "Packed";
+  private static final String PACKED = "Order Packed";
 
-  private static final int H = 300;       // Height of window pixels
-  private static final int W = 400;       // Width  of window pixels
+  private static final int H = 324;       // Height of window pixels
+  private static final int W = 501;       // Width  of window pixels
 
   private final JLabel      pageTitle  = new JLabel();
   private final JLabel      theAction  = new JLabel();
   private final JTextArea   theOutput  = new JTextArea();
   private final JScrollPane theSP      = new JScrollPane();
   private final JButton     theBtPack= new JButton( PACKED );
- 
+
+  private Logo theLogo = new Logo(192,40);
+
   private OrderProcessing theOrder     = null;
   
   private PackingController cont= null;
@@ -47,32 +50,48 @@ public class PackingView implements Observer
     {
       System.out.println("Exception: " + e.getMessage() );
     }
+
+    Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
+    Color mainblue = new Color(16, 72, 98);
+    Color maingray = new Color(116, 116, 116);
+
     Container cp         = rpc.getContentPane();    // Content Pane
     Container rootWindow = (Container) rpc;         // Root Window
     cp.setLayout(null);                             // No layout manager
     rootWindow.setSize( W, H );                     // Size of Window
     rootWindow.setLocation( x, y );
-    
-    Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
-    
-    pageTitle.setBounds( 110, 0 , 270, 20 );       
-    pageTitle.setText( "Packing Bought Order" );                        
+
+    cp.setBackground(maingray);             //set background to gray
+
+    pageTitle.setBounds( 210, 0 , 270, 20 );
+    pageTitle.setText( "Packing An Order" );
+    pageTitle.setForeground( Color.WHITE );
     cp.add( pageTitle );
 
-    theBtPack.setBounds( 16, 25+60*0, 80, 40 );   // Check Button
+    theBtPack.setBounds( 4, 50, 192, 40 );   // Check Button
+    theBtPack.setBackground(mainblue);             //set background to blue
+    theBtPack.setForeground( Color.WHITE );        //set text to white
     theBtPack.addActionListener(                   // Call back code
       e -> cont.doPacked() );
     cp.add( theBtPack );                          //  Add to canvas
 
-    theAction.setBounds( 110, 25 , 270, 20 );       // Message area
+    theAction.setBounds( 210, 25 , 270, 20 );       // Message area
+    theAction.setBackground(maingray);             //set background to gray
+    theAction.setForeground(Color.WHITE);        //set text to white
     theAction.setText( "" );                        // Blank
     cp.add( theAction );                            //  Add to canvas
 
-    theSP.setBounds( 110, 55, 270, 205 );           // Scrolling pane
+    theSP.setBounds( 210, 100, 270, 160 );          // Scrolling pane
+    theSP.setBackground(maingray);             //set background to gray
+    theSP.setForeground(Color.WHITE);        //set text to white
     theOutput.setText( "" );                        //  Blank
     theOutput.setFont( f );                         //  Uses font  
     cp.add( theSP );                                //  Add to canvas
     theSP.getViewport().add( theOutput );           //  In TextArea
+
+    theLogo.setBounds( 4, 0, 192, 40 );   // Picture area
+    cp.add(theLogo);                           //  Add to canvas
+
     rootWindow.setVisible( true );                  // Make visible
   }
   
