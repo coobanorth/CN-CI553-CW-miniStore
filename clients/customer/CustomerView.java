@@ -23,9 +23,10 @@ public class CustomerView implements Observer
     public static final String CHECK  = "Search Product Number";
     public static final String CHECKName  = "Search Product Name";
     public static final String CLEAR  = "Clear Results";
+    public static final String ALL  = "View All Products";
   }
 
-  private static final int H = 324;       // Height of window pixels
+  private static final int H = 374;       // Height of window pixels
   private static final int W = 501;       // Width  of window pixels
 
   private final JLabel      pageTitle  = new JLabel();
@@ -35,6 +36,7 @@ public class CustomerView implements Observer
   private final JScrollPane theSP      = new JScrollPane();
   private final JButton     theBtCheck = new JButton( Name.CHECK );
   private final JButton     theBtCheckName = new JButton( Name.CHECKName );
+  private final JButton     theBtAll = new JButton( Name.ALL );
   private final JButton     theBtClear = new JButton( Name.CLEAR );
 
   private Picture thePicture = new Picture(80,80);
@@ -93,7 +95,14 @@ public class CustomerView implements Observer
             e -> cont.doCheckByName( theInput.getText() ) );
     cp.add( theBtCheckName );                           //  Add to canvas
 
-    theBtClear.setBounds( 4, 100+40+10, 192, 40 );    // Clear button
+    theBtAll.setBounds( 4, 100+40+10, 192, 40 );    // Clear button
+    theBtAll.setBackground(mainblue);             //set background to blue
+    theBtAll.setForeground( Color.WHITE );        //set text to white
+    theBtAll.addActionListener(                   // Call back code
+            e -> cont.doAll() );
+    cp.add( theBtAll );                           //  Add to canvas
+
+    theBtClear.setBounds( 4, 150+40+10, 192, 40 );    // Clear button
     theBtClear.setBackground(mainblue);             //set background to blue
     theBtClear.setForeground( Color.WHITE );        //set text to white
     theBtClear.addActionListener(                   // Call back code
@@ -120,7 +129,7 @@ public class CustomerView implements Observer
     cp.add( theSP );                                //  Add to canvas
     theSP.getViewport().add( theOutput );           //  In TextArea
 
-    thePicture.setBounds( 60, 150+40+10, 80, 80 );   // Picture area
+    thePicture.setBounds( 60, 200+40+10, 80, 80 );   // Picture area
     cp.add( thePicture );                           //  Add to canvas
     thePicture.clear();
 

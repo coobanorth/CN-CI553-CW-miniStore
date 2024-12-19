@@ -44,6 +44,14 @@ public class CustomerController
     model.doClear();
   }
 
+  /**
+   * view all products
+   */
+  public void doAll()
+  {
+    model.doAll();
+  }
+
   
 }
 

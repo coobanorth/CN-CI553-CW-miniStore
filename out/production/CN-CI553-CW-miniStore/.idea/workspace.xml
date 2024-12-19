@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/clients/Logo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/Picture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/customer/CustomerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/customer/CustomerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +44,16 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.BackDoorClient.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CashierClient.executor&quot;: &quot;Run&quot;,
     &quot;Application.CustomerClient.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PackingClient.executor&quot;: &quot;Run&quot;,
     &quot;Application.Setup.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;UI-Update&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ViewAllProducts&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/cooba/Documents/GitHub/CN-CI553-CW-miniStore&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -67,7 +64,33 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.CustomerClient">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="BackDoorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clients.backDoor.BackDoorClient" />
+      <module name="CN-CI553-CW-miniStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clients.backDoor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CashierClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clients.cashier.CashierClient" />
+      <module name="CN-CI553-CW-miniStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clients.cashier.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomerClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="clients.customer.CustomerClient" />
       <module name="CN-CI553-CW-miniStore" />
@@ -97,15 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Setup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <classpathModifications>
-        <entry path="C:\Users\cooba\Documents\GitHub\CN-CI553-CW-miniStore\lib\db-derby-10.14.2.0-lib\lib\derby.jar" />
-      </classpathModifications>
-      <option name="MAIN_CLASS_NAME" value="clients.Setup" />
+    <configuration name="PackingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clients.packing.PackingClient" />
       <module name="CN-CI553-CW-miniStore" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="clients.*" />
+          <option name="PATTERN" value="clients.packing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,23 +134,27 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.BackDoorClient" />
+      <item itemvalue="Application.CashierClient" />
+      <item itemvalue="Application.PackingClient" />
       <item itemvalue="Application.CustomerClient" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Setup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomerClient" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Setup" />
+        <item itemvalue="Application.PackingClient" />
+        <item itemvalue="Application.BackDoorClient" />
+        <item itemvalue="Application.CashierClient" />
+        <item itemvalue="Application.CustomerClient" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -144,6 +168,8 @@
       <updated>1729162531211</updated>
       <workItem from="1732984490546" duration="3772000" />
       <workItem from="1733948496869" duration="8284000" />
+      <workItem from="1734000631825" duration="7402000" />
+      <workItem from="1734606140605" duration="619000" />
     </task>
     <servers />
   </component>
