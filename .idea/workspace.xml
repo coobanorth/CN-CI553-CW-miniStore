@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/clients/newitem/NewItemClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/newitem/NewItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/newitem/NewItemModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/newitem/NewItemView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/seg0/c4e0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/seg0/c4e0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/PosOnScrn.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/PosOnScrn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/backDoor/BackDoorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/backDoor/BackDoorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/backDoor/BackDoorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/backDoor/BackDoorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c4e0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/seg0/c4e0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/newitem/NewItemView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/newitem/NewItemView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +65,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.NewItemClient">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BackDoorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="clients.backDoor.BackDoorClient" />
       <module name="CN-CI553-CW-miniStore" />
@@ -162,8 +143,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NewItemClient" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.NewItemClient" />
         <item itemvalue="Application.BackDoorClient" />
         <item itemvalue="Application.CustomerClient" />
         <item itemvalue="Application.PackingClient" />
@@ -190,7 +171,7 @@
       <workItem from="1733948496869" duration="8284000" />
       <workItem from="1734000631825" duration="7402000" />
       <workItem from="1734606140605" duration="6862000" />
-      <workItem from="1735415598060" duration="2389000" />
+      <workItem from="1735415598060" duration="2739000" />
     </task>
     <servers />
   </component>

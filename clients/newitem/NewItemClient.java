@@ -1,8 +1,5 @@
 package clients.newitem;
 
-import clients.newitem.NewItemController;
-import clients.newitem.NewItemModel;
-import clients.newitem.NewItemView;
 import middle.MiddleFactory;
 import middle.Names;
 import middle.RemoteMiddleFactory;

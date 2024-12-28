@@ -24,6 +24,8 @@ public class NewItemView implements Observer {
     private final JLabel      theAction  = new JLabel();
     private final JTextField  theInput   = new JTextField();
     private final JTextField  theInputNo = new JTextField();
+    private final JTextField  theInput2   = new JTextField();
+    private final JTextField  theInputNo3 = new JTextField();
     private final JTextArea   theOutput  = new JTextArea();
     private final JScrollPane theSP      = new JScrollPane();
     private final JButton     theBtClear = new JButton( CLEAR );
@@ -95,7 +97,19 @@ public class NewItemView implements Observer {
         theInputNo.setText("Stock To Add");                        // 0
         cp.add( theInputNo );                           //  Add to canvas
 
-        theSP.setBounds( 210, 100, 270, 160 );          // Scrolling pane
+        theInput2.setBounds( 210, 100, 130, 40 );         // input area
+        theInput2.setBackground(maingray);             //set background to gray
+        theInput2.setForeground(Color.WHITE);        //set text to white
+        theInput2.setText("Product Number");                           // Blank
+        cp.add( theInput2 );                             //  Add to canvas
+
+        theInputNo3.setBounds( 350, 100, 130, 40 );         // Input Area
+        theInputNo3.setBackground(maingray);             //set background to gray
+        theInputNo3.setForeground(Color.WHITE);        //set text to white
+        theInputNo3.setText("Stock To Add");                        // 0
+        cp.add( theInputNo3 );                           //  Add to canvas
+
+        theSP.setBounds( 210, 150, 270, 160 );          // Scrolling pane
         theSP.setBackground(maingray);             //set background to gray
         theSP.setForeground(Color.WHITE);        //set text to white
         theOutput.setText( "" );                        //  Blank
