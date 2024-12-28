@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catshop.db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/log/log1.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CustomerClient" />
         <item itemvalue="Application.PackingClient" />
         <item itemvalue="Application.BackDoorClient" />
         <item itemvalue="Application.CashierClient" />
-        <item itemvalue="Application.CustomerClient" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +169,7 @@
       <workItem from="1732984490546" duration="3772000" />
       <workItem from="1733948496869" duration="8284000" />
       <workItem from="1734000631825" duration="7402000" />
-      <workItem from="1734606140605" duration="619000" />
+      <workItem from="1734606140605" duration="6862000" />
     </task>
     <servers />
   </component>

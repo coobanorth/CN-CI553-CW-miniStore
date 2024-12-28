@@ -18,6 +18,7 @@ public class BackDoorView implements Observer
   private static final String RESTOCK  = "Add Stock";
   private static final String CLEAR    = "Clear";
   private static final String QUERY    = "Query Stock";
+  private static final String NEW    = "New Sellable Item";
  
   private static final int H = 374;       // Height of window pixels
   private static final int W = 501;       // Width  of window pixels
@@ -31,6 +32,8 @@ public class BackDoorView implements Observer
   private final JButton     theBtClear = new JButton( CLEAR );
   private final JButton     theBtRStock = new JButton( RESTOCK );
   private final JButton     theBtQuery = new JButton( QUERY );
+  private final JButton     theBtNew = new JButton( NEW );
+
 
   private Logo theLogo = new Logo(192,40);
 
@@ -86,12 +89,20 @@ public class BackDoorView implements Observer
                           theInputNo.getText() ) );
     cp.add( theBtRStock );                          //  Add to canvas
 
+
     theBtClear.setBounds( 4, 100+40+10, 192, 40 );    // clear button
     theBtClear.setBackground(mainblue);             //set background to blue
     theBtClear.setForeground( Color.WHITE );        //set text to white
     theBtClear.addActionListener(                   // Call back code
       e -> cont.doClear() );
     cp.add( theBtClear );                           //  Add to canvas
+
+    theBtNew.setBounds( 4, 150+40+10, 192, 40 );    // clear button
+    theBtNew.setBackground(mainblue);             //set background to blue
+    theBtNew.setForeground( Color.WHITE );        //set text to white
+    theBtNew.addActionListener(                   // Call back code
+            e -> cont.doNew() );
+    cp.add( theBtNew );                           //  Add to canvas
 
 
     theAction.setBounds( 210, 25 , 270, 20 );       // Message area
