@@ -1,8 +1,6 @@
 package clients.newitem;
 
 import clients.Logo;
-import clients.backDoor.BackDoorController;
-import clients.backDoor.BackDoorModel;
 import middle.MiddleFactory;
 import middle.StockReadWriter;
 
@@ -13,22 +11,20 @@ import java.util.Observer;
 
 public class NewItemView implements Observer {
 
-    private static final String RESTOCK  = "Add Stock";
-    private static final String CLEAR    = "Clear";
-    private static final String QUERY    = "Query Stock";
+    private static final String SUBMIT    = "Submit";
+
 
     private static final int H = 374;       // Height of window pixels
     private static final int W = 501;       // Width  of window pixels
 
     private final JLabel pageTitle  = new JLabel();
     private final JLabel      theAction  = new JLabel();
-    private final JTextField  theInput   = new JTextField();
-    private final JTextField  theInputNo = new JTextField();
-    private final JTextField  theInput2   = new JTextField();
-    private final JTextField  theInputNo3 = new JTextField();
+    private final JTextField  theInputPrice   = new JTextField();
+    private final JTextField  theInputStock = new JTextField();
+    private final JTextField  theInputDesc   = new JTextField();
     private final JTextArea   theOutput  = new JTextArea();
     private final JScrollPane theSP      = new JScrollPane();
-    private final JButton     theBtClear = new JButton( CLEAR );
+    private final JButton theBtSubmit = new JButton( SUBMIT );
 
 
     private Logo theLogo = new Logo(192,40);
@@ -66,17 +62,17 @@ public class NewItemView implements Observer {
         cp.setBackground(maingray);             //set background to gray
 
         pageTitle.setBounds( 210, 0 , 270, 20 );
-        pageTitle.setText( "Staff check and manage stock" );
+        pageTitle.setText( "Add New Item Of Stock" );
         pageTitle.setForeground( Color.WHITE );
         cp.add( pageTitle );
 
 
-        theBtClear.setBounds( 4, 100+40+10, 192, 40 );    // clear button
-        theBtClear.setBackground(mainblue);             //set background to blue
-        theBtClear.setForeground( Color.WHITE );        //set text to white
-        theBtClear.addActionListener(                   // Call back code
+        theBtSubmit.setBounds( 4, 200+40+10, 192, 40 );    // clear button
+        theBtSubmit.setBackground(mainblue);             //set background to blue
+        theBtSubmit.setForeground( Color.WHITE );        //set text to white
+        theBtSubmit.addActionListener(                   // Call back code
                 e -> cont.doClear() );
-        cp.add( theBtClear );                           //  Add to canvas
+        cp.add(theBtSubmit);                           //  Add to canvas
 
 
         theAction.setBounds( 210, 25 , 270, 20 );       // Message area
@@ -85,29 +81,23 @@ public class NewItemView implements Observer {
         theAction.setText( "" );                        // Blank
         cp.add( theAction );                            //  Add to canvas
 
-        theInput.setBounds( 210, 50, 130, 40 );         // input area
-        theInput.setBackground(maingray);             //set background to gray
-        theInput.setForeground(Color.WHITE);        //set text to white
-        theInput.setText("Product Number");                           // Blank
-        cp.add( theInput );                             //  Add to canvas
+        theInputPrice.setBounds( 210, 50, 130, 40 );         // input area
+        theInputPrice.setBackground(maingray);             //set background to gray
+        theInputPrice.setForeground(Color.WHITE);        //set text to white
+        theInputPrice.setText("Product Price");                           // Blank
+        cp.add( theInputPrice );                             //  Add to canvas
 
-        theInputNo.setBounds( 350, 50, 130, 40 );         // Input Area
-        theInputNo.setBackground(maingray);             //set background to gray
-        theInputNo.setForeground(Color.WHITE);        //set text to white
-        theInputNo.setText("Stock To Add");                        // 0
-        cp.add( theInputNo );                           //  Add to canvas
+        theInputStock.setBounds( 350, 50, 130, 40 );         // Input Area
+        theInputStock.setBackground(maingray);             //set background to gray
+        theInputStock.setForeground(Color.WHITE);        //set text to white
+        theInputStock.setText("Amount In Stock");                        // 0
+        cp.add( theInputStock );                           //  Add to canvas
 
-        theInput2.setBounds( 210, 100, 130, 40 );         // input area
-        theInput2.setBackground(maingray);             //set background to gray
-        theInput2.setForeground(Color.WHITE);        //set text to white
-        theInput2.setText("Product Number");                           // Blank
-        cp.add( theInput2 );                             //  Add to canvas
-
-        theInputNo3.setBounds( 350, 100, 130, 40 );         // Input Area
-        theInputNo3.setBackground(maingray);             //set background to gray
-        theInputNo3.setForeground(Color.WHITE);        //set text to white
-        theInputNo3.setText("Stock To Add");                        // 0
-        cp.add( theInputNo3 );                           //  Add to canvas
+        theInputDesc.setBounds( 210, 100, 270, 40 );         // input area
+        theInputDesc.setBackground(maingray);             //set background to gray
+        theInputDesc.setForeground(Color.WHITE);        //set text to white
+        theInputDesc.setText("Product Description");                           // Blank
+        cp.add( theInputDesc );                             //  Add to canvas
 
         theSP.setBounds( 210, 150, 270, 160 );          // Scrolling pane
         theSP.setBackground(maingray);             //set background to gray
@@ -121,7 +111,7 @@ public class NewItemView implements Observer {
         cp.add(theLogo);                           //  Add to canvas
 
         rootWindow.setVisible( true );                  // Make visible
-        theInput.requestFocus();                        // Focus is here
+        theInputPrice.requestFocus();                        // Focus is here
     }
 
     public void setController( NewItemController c )
@@ -142,7 +132,7 @@ public class NewItemView implements Observer {
         theAction.setText( message );
 
         theOutput.setText( model.getBasket().getDetails() );
-        theInput.requestFocus();
+        theInputPrice.requestFocus();
     }
 
 }

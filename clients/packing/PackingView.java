@@ -81,7 +81,7 @@ public class PackingView implements Observer
     theAction.setText( "" );                        // Blank
     cp.add( theAction );                            //  Add to canvas
 
-    theSP.setBounds( 210, 100, 270, 160 );          // Scrolling pane
+    theSP.setBounds( 210, 50, 270, 160 );          // Scrolling pane
     theSP.setBackground(maingray);             //set background to gray
     theSP.setForeground(Color.WHITE);        //set text to white
     theOutput.setText( "" );                        //  Blank
