@@ -22,6 +22,7 @@ public class NewItemView implements Observer {
     private final JTextField  theInputPrice   = new JTextField();
     private final JTextField  theInputStock = new JTextField();
     private final JTextField  theInputDesc   = new JTextField();
+    private final JTextField  theInputNum   = new JTextField();
     private final JTextArea   theOutput  = new JTextArea();
     private final JScrollPane theSP      = new JScrollPane();
     private final JButton theBtSubmit = new JButton( SUBMIT );
@@ -71,7 +72,7 @@ public class NewItemView implements Observer {
         theBtSubmit.setBackground(mainblue);             //set background to blue
         theBtSubmit.setForeground( Color.WHITE );        //set text to white
         theBtSubmit.addActionListener(                   // Call back code
-                e -> cont.doClear() );
+                e -> cont.doSubmit(theInputNum.getText(),theInputDesc.getText(), theInputPrice.getText(), theInputStock.getText()) );
         cp.add(theBtSubmit);                           //  Add to canvas
 
 
@@ -93,11 +94,17 @@ public class NewItemView implements Observer {
         theInputStock.setText("Amount In Stock");                        // 0
         cp.add( theInputStock );                           //  Add to canvas
 
-        theInputDesc.setBounds( 210, 100, 270, 40 );         // input area
+        theInputDesc.setBounds( 210, 100, 130, 40 );         // input area
         theInputDesc.setBackground(maingray);             //set background to gray
         theInputDesc.setForeground(Color.WHITE);        //set text to white
         theInputDesc.setText("Product Description");                           // Blank
         cp.add( theInputDesc );                             //  Add to canvas
+
+        theInputNum.setBounds( 350, 100, 130, 40 );         // input area
+        theInputNum.setBackground(maingray);             //set background to gray
+        theInputNum.setForeground(Color.WHITE);        //set text to white
+        theInputNum.setText("Product Number");                           // Blank
+        cp.add( theInputNum );                             //  Add to canvas
 
         theSP.setBounds( 210, 150, 270, 160 );          // Scrolling pane
         theSP.setBackground(maingray);             //set background to gray
@@ -131,7 +138,7 @@ public class NewItemView implements Observer {
         String        message = (String) arg;
         theAction.setText( message );
 
-        theOutput.setText( model.getBasket().getDetails() );
+        theOutput.setText( model.getNewItemOutput().getDetails() );
         theInputPrice.requestFocus();
     }
 

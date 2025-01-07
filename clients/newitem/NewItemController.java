@@ -24,4 +24,7 @@ public class NewItemController {
     }
 
 
+    public void doSubmit(String Num, String Desc, String Price, String Stock) {
+    model.doSubmit(Num,Desc,Price,Stock);
+    }
 }
