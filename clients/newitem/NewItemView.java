@@ -1,7 +1,9 @@
 package clients.newitem;
 
 import clients.Logo;
+import clients.customer.CustomerView;
 import middle.MiddleFactory;
+import middle.StockException;
 import middle.StockReadWriter;
 
 import javax.swing.*;
@@ -11,8 +13,10 @@ import java.util.Observer;
 
 public class NewItemView implements Observer {
 
-    private static final String SUBMIT    = "Submit";
 
+    public static final String ALL  = "View All Products";
+    public static final String CLEAR  = "Clear All Products";
+    private static final String SUBMIT    = "Submit";
 
     private static final int H = 374;       // Height of window pixels
     private static final int W = 501;       // Width  of window pixels
@@ -25,6 +29,8 @@ public class NewItemView implements Observer {
     private final JTextField  theInputNum   = new JTextField();
     private final JTextArea   theOutput  = new JTextArea();
     private final JScrollPane theSP      = new JScrollPane();
+    private final JButton     theBtAll = new JButton( ALL );
+    private final JButton     theBtClear = new JButton(CLEAR );
     private final JButton theBtSubmit = new JButton( SUBMIT );
 
 
@@ -67,12 +73,31 @@ public class NewItemView implements Observer {
         pageTitle.setForeground( Color.WHITE );
         cp.add( pageTitle );
 
+        theBtAll.setBounds( 4, 100+40+10, 192, 40 );    // Clear button
+        theBtAll.setBackground(mainblue);             //set background to blue
+        theBtAll.setForeground( Color.WHITE );        //set text to white
+        theBtAll.addActionListener(                   // Call back code
+                e -> cont.doAll() );
+        cp.add( theBtAll );                           //  Add to canvas
+
+        theBtClear.setBounds( 4, 150+40+10, 192, 40 );    // Clear button
+        theBtClear.setBackground(mainblue);             //set background to blue
+        theBtClear.setForeground( Color.WHITE );        //set text to white
+        theBtClear.addActionListener(                   // Call back code
+                e -> cont.doClear() );
+        cp.add( theBtClear );                           //  Add to canvas
 
         theBtSubmit.setBounds( 4, 200+40+10, 192, 40 );    // clear button
         theBtSubmit.setBackground(mainblue);             //set background to blue
         theBtSubmit.setForeground( Color.WHITE );        //set text to white
         theBtSubmit.addActionListener(                   // Call back code
-                e -> cont.doSubmit(theInputNum.getText(),theInputDesc.getText(), theInputPrice.getText(), theInputStock.getText()) );
+                e -> {
+                    try {
+                        cont.doSubmit(theInputNum.getText(),theInputDesc.getText(), theInputPrice.getText(), theInputStock.getText());
+                    } catch (StockException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                });
         cp.add(theBtSubmit);                           //  Add to canvas
 
 

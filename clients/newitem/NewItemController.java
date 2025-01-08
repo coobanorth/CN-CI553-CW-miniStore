@@ -2,6 +2,7 @@ package clients.newitem;
 
 import clients.backDoor.BackDoorModel;
 import clients.backDoor.BackDoorView;
+import middle.StockException;
 
 public class NewItemController {
 
@@ -24,7 +25,11 @@ public class NewItemController {
     }
 
 
-    public void doSubmit(String Num, String Desc, String Price, String Stock) {
+    public void doSubmit(String Num, String Desc, String Price, String Stock) throws StockException {
     model.doSubmit(Num,Desc,Price,Stock);
+    }
+
+    public void doAll() {
+        model.doAll();
     }
 }

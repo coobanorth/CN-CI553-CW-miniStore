@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/catshop.db/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/newitem/NewItemView.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/newitem/NewItemView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CN-CI553-CW-miniStore/catshop.db/db.lck" afterDir="false" />
-    </list>
+    <list default="true" id="45add118-db23-41e5-9437-e68c8b7e1738" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "AddNewProduct",
+    "git-widget-placeholder": "AddNewProducts",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cooba/Documents/GitHub/CN-CI553-CW-miniStore",
     "node.js.detected.package.eslint": "true",
@@ -148,8 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.PackingClient" />
         <item itemvalue="Application.NewItemClient" />
+        <item itemvalue="Application.PackingClient" />
         <item itemvalue="Application.BackDoorClient" />
         <item itemvalue="Application.CustomerClient" />
       </list>
@@ -158,8 +152,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -177,6 +171,7 @@
       <workItem from="1734606140605" duration="6862000" />
       <workItem from="1735415598060" duration="2865000" />
       <workItem from="1736012131040" duration="2180000" />
+      <workItem from="1736270164166" duration="3640000" />
     </task>
     <servers />
   </component>

@@ -70,7 +70,7 @@ public class NewItemOutput extends ArrayList<Product> implements Serializable
         StringBuilder sb = new StringBuilder(256);
         Formatter     fr = new Formatter(sb, uk);
         String csign = (Currency.getInstance( uk )).getSymbol();
-        double total = 0.00;
+
         if ( theOrderNum != 0 )
             fr.format( "Order number: %03d\n", theOrderNum );
 
@@ -82,10 +82,10 @@ public class NewItemOutput extends ArrayList<Product> implements Serializable
                 fr.format("%-7s",       pr.getProductNum() );
                 fr.format("%-14.14s ",  pr.getDescription() );
                 fr.format("(%3d) ",     number );
-                fr.format("%s%7.2f",    csign, pr.getPrice() * number );
+                fr.format("%s%7.2f",    csign, pr.getPrice() * 1 );
                 fr.format("\n");
-                fr.close();
             }
+            fr.close();
         }
         return sb.toString();
     }
