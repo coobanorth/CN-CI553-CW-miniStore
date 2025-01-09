@@ -130,4 +130,39 @@ public class StockRW extends StockR implements StockReadWriter
       throw new StockException( "SQL modifyStock: " + e.getMessage() );
     }
   }
+
+  public synchronized void addProduct(String num, String desc, String price, String stock)
+          throws StockException
+  {
+    //convert to correct data types
+    //stock to int
+    int istock = Integer.valueOf(stock);
+    //price to float
+    float fprice = Float.valueOf(price);
+
+    System.out.println(num);
+    System.out.println(desc);
+    System.out.println(price);
+    System.out.println(stock);
+    System.out.println(istock);
+    System.out.println(fprice);
+
+    DEBUG.trace( "DB StockRW: ADDPRODUCT(%s)",
+            num );
+    try
+    {
+        getStatementObject().executeUpdate(
+                "insert into ProductTable values " + "('"+num+"', '"+desc+"', '', "+fprice+")");
+
+        getStatementObject().executeUpdate(
+                "insert into StockTable values " + "('"+num+"', "+istock+")");
+
+      //getConnectionObject().commit();
+
+    } catch ( SQLException e )
+    {
+      throw new StockException( "SQL ADDPRODUCT: " + e.getMessage() );
+    }
+  }
+
 }

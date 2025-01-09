@@ -1,18 +1,24 @@
 package clients.newitem;
 
-import catalogue.Basket;
+import dbAccess.DBAccess;
+import dbAccess.DBAccessFactory;
+
 import catalogue.NewItemOutput;
 import catalogue.Product;
 import debug.DEBUG;
 import middle.MiddleFactory;
 import middle.StockException;
 import middle.StockReadWriter;
-import dbAccess.StockR;
+import dbAccess.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Observable;
 
 public class NewItemModel extends Observable {
-    private NewItemOutput NewItemOutput = null;            // Bought items
+    private NewItemOutput NewItemOutput = null;            // view all
     private String pn = "";                      // Product being processed
 
     private StockReadWriter theStock = null;
@@ -47,13 +53,13 @@ public class NewItemModel extends Observable {
         setChanged(); notifyObservers(theAction);
     }
 
-    public void doSubmit(String Num,String desc, String price, String stock) throws StockException {
+    public void doSubmit(String num,String desc, String price, String stock) throws StockException {
         doClear();
         String theAction = "";
-        boolean exist = ProductExistCheck(Num);
+        boolean exist = ProductExistCheck(num);
 
         if (exist == false){
-            //AddProduct();
+            AddProduct(num, desc, price, stock);
             //OutputMessage(Num, desc, price, stock);
             theAction = "Space For New Product";
         }
@@ -61,13 +67,15 @@ public class NewItemModel extends Observable {
         else{
             theAction = "Product Number Already Exists";
         }
+
         setChanged();
         notifyObservers(theAction);
     }
 
     public boolean ProductExistCheck(String Num) throws StockException {
-        Boolean NumLookup = LookupPN(Num);
-        if (NumLookup = true) {
+        boolean NumLookup = LookupPN(Num);
+
+        if (NumLookup == true) {
             return true;
         }
         else {
@@ -79,7 +87,7 @@ public class NewItemModel extends Observable {
         StockR sr = new StockR();
         boolean state = sr.exists(Num);
 
-        if (state = true) {
+        if (state == true) {
             return true;
         }
         else {
@@ -87,7 +95,14 @@ public class NewItemModel extends Observable {
         }
     }
 
-    public void AddProduct(){}
+    public void AddProduct(String num,String desc, String price, String stock) throws StockException {
+        String SQLProduct = "insert into ProductTable values " + "('"+num+"', '"+desc+"', '', "+price+")";
+        String SQLStock = "insert into StockTable values " + "('"+num+"', '"+stock+")";
+
+        StockRW srw = new StockRW();
+        srw.addProduct(num,desc,price,stock);
+
+    }
 
 
 
@@ -133,8 +148,21 @@ public class NewItemModel extends Observable {
         String theAction = "";
         pn  = productNum.trim();                    // Product no.
         int    amount  = 1;                         //  & quantity
-        for(int x=1;x<8;x++){
-            pn = "000"+ String.valueOf(x);
+        for(int x=1;x<101;x++){
+            if(x<10) {
+                pn = "000" + String.valueOf(x);
+            }
+            else if(x<100){
+                pn = "00" + String.valueOf(x);
+            }
+            else if(x<1000){
+                pn = "0" + String.valueOf(x);
+            }
+            else {
+                pn = String.valueOf(x);
+            }
+
+
             try {
                 Product pr = theStock.getDetails(pn); //  Product
                     NewItemOutput.add( pr );                  //   Add to basket

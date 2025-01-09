@@ -7,10 +7,10 @@ import java.util.Formatter;
 import java.util.Locale;
 
 /**
- * A collection of products,
- * used to record the products that are to be wished to be purchased.
- * @author  Mike Smith University of Brighton
- * @version 2.2
+ * New Item Output class, modified version of Basket
+ * which removes stock checking features
+ * @author  Cooba North
+ * @version 1.0
  *
  */
 public class NewItemOutput extends ArrayList<Product> implements Serializable
@@ -19,7 +19,7 @@ public class NewItemOutput extends ArrayList<Product> implements Serializable
     private int    theOrderNum = 0;          // Order number
 
     /**
-     * Constructor for a basket which is
+     * Constructor for a basket/NewItemOutput which is
      *  used to represent a customer order/ wish list
      */
     public NewItemOutput()

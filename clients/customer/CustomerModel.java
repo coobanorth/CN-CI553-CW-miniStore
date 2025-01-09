@@ -99,8 +99,20 @@ public class CustomerModel extends Observable
     String theAction = "";
     pn  = productNum.trim();                    // Product no.
     int    amount  = 1;                         //  & quantity
-    for(int x=1;x<8;x++){
-      pn = "000"+ String.valueOf(x);
+    for(int x=1;x<101;x++){
+      if(x<10) {
+        pn = "000" + String.valueOf(x);
+      }
+      else if(x<100){
+        pn = "00" + String.valueOf(x);
+      }
+      else if(x<1000){
+        pn = "0" + String.valueOf(x);
+      }
+      else {
+        pn = String.valueOf(x);
+      }
+      
       try {
         if (theStock.exists(pn))              // Stock Exists?
         {                                         // T
