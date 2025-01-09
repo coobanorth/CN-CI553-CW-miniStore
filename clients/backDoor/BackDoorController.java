@@ -68,7 +68,6 @@ public class BackDoorController
     JFrame window = new JFrame();
 
     window.setTitle( "NewItem Client MVC");
-    window.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     Dimension pos = PosOnScrn.getPos();
 
     NewItemModel model      = new NewItemModel(mlf);

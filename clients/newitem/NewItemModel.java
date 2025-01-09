@@ -60,8 +60,7 @@ public class NewItemModel extends Observable {
 
         if (exist == false){
             AddProduct(num, desc, price, stock);
-            //OutputMessage(Num, desc, price, stock);
-            theAction = "Space For New Product";
+            theAction = "Product Added Successfully";
         }
 
         else{
@@ -102,44 +101,6 @@ public class NewItemModel extends Observable {
         StockRW srw = new StockRW();
         srw.addProduct(num,desc,price,stock);
 
-    }
-
-
-
-    public void OutputMessage(String Num,String desc, String price, String stock) {
-
-        NewItemOutput.clear();                          // Clear s. list
-        String theAction = "";
-        pn  = Num.trim();                    // Product no.
-        int amount = 1;                         //  & quantity
-        try {
-            if (theStock.exists(pn))              // Stock Exists?
-            {                                         // T
-                Product pr = theStock.getDetails(pn); //  Product
-                if (pr.getQuantity() >= amount)       //  In stock?
-                {
-                    theAction =                           //   Display
-                            String.format("%s : %7.2f (%2d) ", //
-                                    pr.getDescription(),              //    description
-                                    pr.getPrice(),                    //    price
-                                    pr.getQuantity());               //    quantity
-
-                    NewItemOutput.add(pr);                  //   Add to basket
-                } else {                                //  F
-                    theAction =                           //   Inform
-                            pr.getDescription() +               //    product not
-                                    " not in stock";                   //    in stock
-                }
-            } else {                                  // F
-                theAction =                             //  Inform Unknown
-                        "Unknown product number " + pn;       //  product number
-            }
-        } catch (StockException e) {
-            DEBUG.error("CustomerClient.doCheck()\n%s",
-                    e.getMessage());
-        }
-        setChanged();
-        notifyObservers(theAction);
     }
 
     public void doAll(){
