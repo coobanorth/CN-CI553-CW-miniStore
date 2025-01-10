@@ -72,17 +72,6 @@ public class NewItemModel extends Observable {
     }
 
     public boolean ProductExistCheck(String Num) throws StockException {
-        boolean NumLookup = LookupPN(Num);
-
-        if (NumLookup == true) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    public boolean LookupPN(String Num) throws StockException {
         StockR sr = new StockR();
         boolean state = sr.exists(Num);
 
@@ -94,13 +83,10 @@ public class NewItemModel extends Observable {
         }
     }
 
-    public void AddProduct(String num,String desc, String price, String stock) throws StockException {
-        String SQLProduct = "insert into ProductTable values " + "('"+num+"', '"+desc+"', '', "+price+")";
-        String SQLStock = "insert into StockTable values " + "('"+num+"', '"+stock+")";
-
+    public void AddProduct(String num,String desc, String price, String stock)
+            throws StockException {
         StockRW srw = new StockRW();
         srw.addProduct(num,desc,price,stock);
-
     }
 
     public void doAll(){
